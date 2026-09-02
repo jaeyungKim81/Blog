@@ -7,8 +7,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 	// 배포 주소. 사이트맵·RSS·OG 태그의 절대 URL 이 이 값을 기준으로 만들어진다.
-	// TODO: Cloudflare Pages 배포 후 실제 주소(https://<이름>.pages.dev 또는 도메인)로 교체.
-	site: 'https://example.pages.dev',
+	// 도메인을 붙이면 이 값도 함께 바꾼다(robots.txt 도 같이).
+	site: 'https://blogmain.pages.dev',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
