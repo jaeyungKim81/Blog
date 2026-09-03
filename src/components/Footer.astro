@@ -6,7 +6,8 @@ const today = new Date();
 
 <footer>
 	&copy; {today.getFullYear()} {AUTHOR}
-	<div class="social-links">
+	<div class="links">
+		<a href="/privacy/">개인정보처리방침</a>
 	</div>
 </footer>
 <style>
@@ -16,17 +17,17 @@ const today = new Date();
 		color: rgb(var(--gray));
 		text-align: center;
 	}
-	.social-links {
+	.links {
 		display: flex;
 		justify-content: center;
 		gap: 1em;
 		margin-top: 1em;
 	}
-	.social-links a {
+	.links a {
 		text-decoration: none;
 		color: rgb(var(--gray));
 	}
-	.social-links a:hover {
+	.links a:hover {
 		color: rgb(var(--gray-dark));
 	}
 </style>
