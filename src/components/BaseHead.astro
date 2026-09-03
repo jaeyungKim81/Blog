@@ -50,3 +50,12 @@ const { title, description, image = FallbackImage } = Astro.props;
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
+
+<!-- 방문 통계 — Cloudflare Web Analytics.
+     쿠키를 쓰지 않고 개별 방문자를 추적하지 않아 동의 배너가 필요 없다.
+     defer 로 로드돼 페이지 렌더를 막지 않는다. 토큰은 페이지 소스에 공개되는 값이다. -->
+<script
+	type="module"
+	src="https://static.cloudflareinsights.com/beacon.min.js"
+	data-cf-beacon='{"token": "98674ff52d744fe89c377cfdb78d4dac"}'
+	is:inline></script>
