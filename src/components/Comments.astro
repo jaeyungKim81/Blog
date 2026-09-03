@@ -1,0 +1,53 @@
+---
+/**
+ * 댓글 — giscus (GitHub Discussions 기반).
+ *
+ * 서버가 필요 없고, 댓글은 이 저장소의 Discussions 에 저장된다. 독자는 GitHub 계정으로
+ * 로그인해 댓글을 단다. Disqus 와 달리 광고·추적 스크립트가 없어 페이지 속도를 깎지 않는다.
+ *
+ * 전제(한 번만 설정):
+ *   1. 저장소가 공개일 것
+ *   2. Settings → General → Features → Discussions 켜기
+ *   3. https://github.com/apps/giscus 를 이 저장소에 설치
+ *
+ * repo/category ID 는 https://giscus.app 에서 저장소를 입력하면 얻는다.
+ * 아래 상수는 그 값이며, 저장소를 옮기면 함께 바꿔야 한다.
+ */
+const REPO = 'jaeyungKim81/Blog';
+const REPO_ID = 'R_kgDOULwHfw';
+const CATEGORY = 'Announcements';
+const CATEGORY_ID = 'DIC_kwDOULwHf84DEwxO';
+---
+
+<section class="comments" aria-label="댓글">
+	<h2>댓글</h2>
+	<script
+		src="https://giscus.app/client.js"
+		data-repo={REPO}
+		data-repo-id={REPO_ID}
+		data-category={CATEGORY}
+		data-category-id={CATEGORY_ID}
+		data-mapping="pathname"
+		data-strict="1"
+		data-reactions-enabled="1"
+		data-emit-metadata="0"
+		data-input-position="top"
+		data-theme="light"
+		data-lang="ko"
+		data-loading="lazy"
+		crossorigin="anonymous"
+		async></script>
+	<noscript>댓글을 보려면 자바스크립트를 켜 주세요.</noscript>
+</section>
+
+<style>
+	.comments {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid rgb(var(--gray-light));
+	}
+	.comments h2 {
+		font-size: 1.25rem;
+		margin-bottom: 1rem;
+	}
+</style>
