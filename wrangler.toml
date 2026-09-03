@@ -1,0 +1,5 @@
+# Cloudflare Pages 빌드 설정.
+#   이 파일이 있으면 대시보드의 "Build output directory" 대신 여기 값이 쓰인다.
+#   설정이 저장소에 남아 프로젝트를 다시 만들거나 옮겨도 그대로 따라간다.
+name = "blogmain"
+pages_build_output_dir = "dist"
