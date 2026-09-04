@@ -1,0 +1,91 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+// 잘못 들어온 사람에게 막다른 길만 주지 않는다. 최근 글을 함께 보여준다.
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const recent = posts.slice(0, 3);
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead
+			title="페이지를 찾을 수 없습니다"
+			description="요청하신 주소에 해당하는 페이지가 없습니다."
+		/>
+		<!-- 이 페이지 자체는 색인 대상이 아니다. Cloudflare Pages 가 404 상태로 내보내지만,
+		     검색엔진이 다른 경로로 도달했을 때를 대비해 명시한다. -->
+		<meta name="robots" content="noindex" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<p class="code">404</p>
+			<h1>페이지를 찾을 수 없습니다</h1>
+			<p class="lead">
+				주소가 바뀌었거나, 잘못 입력했거나, 글이 삭제되었을 수 있습니다.
+			</p>
+
+			<h2>최근 글</h2>
+			<ul class="recent">
+				{
+					recent.map((post) => (
+						<li>
+							<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+						</li>
+					))
+				}
+			</ul>
+			<p class="links">
+				<a href="/">홈으로</a> · <a href="/blog/">글 전체 보기</a>
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: 720px;
+		max-width: calc(100% - 2em);
+		margin: auto;
+		padding: 3em 1em;
+	}
+	.code {
+		font-family: var(--mono);
+		font-size: 3em;
+		font-weight: 700;
+		color: rgb(var(--gray));
+		margin: 0;
+		line-height: 1;
+	}
+	h1 {
+		margin: 0.3em 0 0.2em;
+	}
+	.lead {
+		color: rgb(var(--gray));
+		margin-top: 0;
+	}
+	h2 {
+		margin-top: 2.5em;
+		font-size: 1.3em;
+	}
+	.recent {
+		list-style: none;
+		padding: 0;
+	}
+	.recent li {
+		margin-bottom: 0.8em;
+	}
+	.recent a {
+		font-weight: 700;
+	}
+	.links {
+		margin-top: 2em;
+	}
+</style>
