@@ -29,8 +29,11 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
+	font-size: 19px;
+	/* 한글은 글자가 정사각형에 가까워 영문보다 넉넉한 행간이 편하다 */
+	line-height: 1.8;
+	/* 한글 줄바꿈을 어절 단위로. 없으면 단어 중간에서 끊긴다 */
+	word-break: keep-all;
 }
 main {
 	width: 720px;
@@ -48,20 +51,26 @@ h6 {
 	color: rgb(var(--black));
 	line-height: 1.2;
 }
+/* 한글용 축소 스케일. 템플릿 기본값(h1 3.05em · h2 2.44em)은 영문 기준이라,
+   글자폭이 넓은 한글에서는 소제목 두 글자가 화면을 채울 만큼 커진다. */
 h1 {
-	font-size: 3.052em;
+	font-size: 2.1em;
+	letter-spacing: -0.02em;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: 1.5em;
+	margin-top: 2.2em;
+	letter-spacing: -0.015em;
 }
 h3 {
-	font-size: 1.953em;
+	font-size: 1.22em;
+	margin-top: 1.8em;
 }
 h4 {
-	font-size: 1.563em;
+	font-size: 1.08em;
 }
 h5 {
-	font-size: 1.25em;
+	font-size: 1em;
 }
 strong,
 b {
@@ -88,6 +97,23 @@ input {
 }
 table {
 	width: 100%;
+	border-collapse: collapse;
+	margin: 1.5em 0;
+	font-size: 0.92em;
+	display: block;
+	overflow-x: auto;   /* 넓은 표가 본문 폭을 밀어내지 않게 */
+}
+th,
+td {
+	border: 1px solid rgb(var(--gray-light));
+	padding: 8px 12px;
+	text-align: left;
+	vertical-align: top;
+}
+th {
+	background: rgba(var(--gray-light), 45%);
+	font-weight: 700;
+	white-space: nowrap;
 }
 img {
 	max-width: 100%;

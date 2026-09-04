@@ -24,6 +24,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.hero-image {
 				width: 100%;
 			}
+			/* 대표 이미지가 없는 글에서 빈 띠가 남지 않도록 */
+			.hero-image:empty {
+				display: none;
+			}
 			.hero-image img {
 				display: block;
 				margin: 0 auto;
@@ -38,13 +42,16 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				color: rgb(var(--gray-dark));
 			}
 			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
+				margin-bottom: 1.2em;
+				padding: 0.5em 0 1em;
+				/* 가운데 정렬은 영문 제목에는 어울리지만, 한글 제목이 여러 줄로 나뉘면
+				   줄 길이가 들쭉날쭉해 읽기 나빠진다. 왼쪽 정렬로 둔다. */
+				text-align: left;
+				line-height: 1.35;
 			}
 			.title h1 {
-				margin: 0 0 0.5em 0;
+				margin: 0.15em 0 0.4em;
+				word-break: keep-all;
 			}
 			.date {
 				margin-bottom: 0.5em;
