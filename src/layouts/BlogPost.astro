@@ -9,7 +9,7 @@ import Comments from '../components/Comments.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, category } = Astro.props;
 ---
 
 <html lang="ko">
@@ -57,6 +57,18 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				margin-bottom: 0.5em;
 				color: rgb(var(--gray));
 			}
+			.cat {
+				margin-left: 0.5em;
+				padding: 0.12em 0.6em;
+				border-radius: 999px;
+				background: rgb(var(--gray-light));
+				font-size: 0.82rem;
+				color: rgb(var(--gray-dark));
+				text-decoration: none;
+			}
+			.cat:hover {
+				color: rgb(var(--black));
+			}
 			.last-updated-on {
 				font-style: italic;
 			}
@@ -74,6 +86,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					<div class="title">
 						<div class="date">
 							<FormattedDate date={pubDate} />
+							<a class="cat" href={`/blog/category/${encodeURIComponent(category)}/`}>
+								{category}
+							</a>
 							{
 								updatedDate && (
 									<div class="last-updated-on">

@@ -1,0 +1,53 @@
+---
+// 글 목록 위에 놓는 분류 탭. 현재 보고 있는 분류를 current 로 넘긴다.
+// current 가 없으면 '전체'가 선택된 것으로 본다.
+interface Props {
+	categories: readonly string[];
+	current?: string;
+}
+
+const { categories, current } = Astro.props;
+---
+
+<nav class="tabs" aria-label="글 분류">
+	<a href="/blog/" class:list={['tab', { active: !current }]}>전체</a>
+	{
+		categories.map((c) => (
+			<a
+				href={`/blog/category/${encodeURIComponent(c)}/`}
+				class:list={['tab', { active: current === c }]}
+			>
+				{c}
+			</a>
+		))
+	}
+</nav>
+
+<style>
+	.tabs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		margin-bottom: 0.4rem;
+		padding-bottom: 1.1rem;
+		border-bottom: 1px solid rgb(var(--gray-light));
+	}
+	.tab {
+		padding: 0.34rem 0.85rem;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 999px;
+		font-size: 0.92rem;
+		color: rgb(var(--gray-dark));
+		text-decoration: none;
+		line-height: 1.6;
+	}
+	.tab:hover {
+		border-color: rgb(var(--gray));
+		color: rgb(var(--black));
+	}
+	.tab.active {
+		border-color: rgb(var(--accent));
+		background: rgb(var(--accent));
+		color: white;
+	}
+</style>

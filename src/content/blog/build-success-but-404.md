@@ -2,6 +2,7 @@
 title: '빌드는 "성공"인데 사이트가 404 — 배포된 게 무엇인지 확인하는 법'
 description: 'Cloudflare Pages 배포가 Success 로 뜨는데 접속하면 404. 빌드 로그에 오류가 없어 원인이 안 보일 때, 무엇이 배포됐는지부터 확인하면 답이 나온다.'
 pubDate: 'Sep 04 2026'
+category: '개발'
 ---
 
 정적 블로그를 Cloudflare Pages에 올렸다. 배포 목록에는 **Success** 가 찍혀 있는데 주소로 들어가면 404였다.

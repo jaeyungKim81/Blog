@@ -1,26 +1,43 @@
 ---
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
-import BaseHead from '../../components/BaseHead.astro';
-import Footer from '../../components/Footer.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
-import Header from '../../components/Header.astro';
-import CategoryTabs from '../../components/CategoryTabs.astro';
-import { CATEGORIES, SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import BaseHead from '../../../components/BaseHead.astro';
+import CategoryTabs from '../../../components/CategoryTabs.astro';
+import Footer from '../../../components/Footer.astro';
+import FormattedDate from '../../../components/FormattedDate.astro';
+import Header from '../../../components/Header.astro';
+import { CATEGORIES, SITE_TITLE } from '../../../consts';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+// 글이 있는 분류만 페이지를 만든다. 빈 분류로 들어오면 404 가 나는 편이
+// 빈 목록을 보여 주는 것보다 낫다.
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return CATEGORIES.filter((c) => posts.some((p) => p.data.category === c)).map(
+		(category) => ({
+			params: { category },
+			props: {
+				posts: posts
+					.filter((p) => p.data.category === category)
+					.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+			},
+		}),
+	);
+}
 
-// 글이 하나도 없는 분류는 탭에 띄우지 않는다. 눌렀더니 빈 화면이 나오는
-// 것보다 아예 안 보이는 편이 낫다.
-const used = CATEGORIES.filter((c) => posts.some((p) => p.data.category === c));
+const { category } = Astro.params;
+const { posts } = Astro.props;
+
+const all = await getCollection('blog');
+const used = CATEGORIES.filter((c) => all.some((p) => p.data.category === c));
 ---
 
 <!doctype html>
 <html lang="ko">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead
+			title={`${category} — ${SITE_TITLE}`}
+			description={`${category} 분류의 글 ${posts.length}편`}
+		/>
 		<style>
 			main {
 				width: 760px;
@@ -30,7 +47,6 @@ const used = CATEGORIES.filter((c) => posts.some((p) => p.data.category === c));
 				margin: 0;
 				padding: 0;
 			}
-			/* 2단 배치는 한글 제목이 줄바꿈되며 답답해진다. 한 줄에 하나씩 두고 요약을 보인다. */
 			ul li {
 				padding: 1.6rem 0;
 				border-bottom: 1px solid rgb(var(--gray-light));
@@ -58,15 +74,6 @@ const used = CATEGORIES.filter((c) => posts.some((p) => p.data.category === c));
 				font-size: 0.85rem;
 				color: rgb(var(--gray));
 			}
-			/* 날짜 줄에 함께 두어 제목 아래 한 줄로 정리한다 */
-			.cat {
-				margin-left: 0.5rem;
-				padding: 0.1rem 0.5rem;
-				border-radius: 999px;
-				background: rgb(var(--gray-light));
-				font-size: 0.78rem;
-				color: rgb(var(--gray-dark));
-			}
 			.desc {
 				margin: 0.6rem 0 0;
 				font-size: 0.94rem;
@@ -87,7 +94,7 @@ const used = CATEGORIES.filter((c) => posts.some((p) => p.data.category === c));
 		<Header />
 		<main>
 			<section>
-				<CategoryTabs categories={used} />
+				<CategoryTabs categories={used} current={category} />
 				<ul>
 					{
 						posts.map((post) => (
@@ -99,7 +106,6 @@ const used = CATEGORIES.filter((c) => posts.some((p) => p.data.category === c));
 									<h2 class="title">{post.data.title}</h2>
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />
-										<span class="cat">{post.data.category}</span>
 									</p>
 									<p class="desc">{post.data.description}</p>
 								</a>
