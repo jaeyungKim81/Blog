@@ -8,9 +8,10 @@ import BlogPost from '../layouts/BlogPost.astro';
 	pubDate={new Date('September 3 2026')}
 >
 	<p>
-		이 블로그(<code>blogmain.pages.dev</code>, 이하 "사이트")는 방문자의 개인정보를 직접
-		수집·저장하지 않습니다. 다만 사이트를 운영하기 위해 사용하는 외부 서비스가 일부 정보를
-		처리하며, 아래에 그 내용을 밝힙니다.
+		이 블로그(<code>blogmain.pages.dev</code>, 이하 "사이트")는 방문자의 개인정보를 사이트에서
+		직접 수집·저장하지 않습니다. 다만 사이트를 운영하기 위해 사용하는 외부 서비스가 일부 정보를
+		처리하며, <strong>뉴스레터 구독은 외부 서비스에서 이메일 주소를 수집</strong>합니다.
+		아래에 그 내용을 밝힙니다.
 	</p>
 
 	<h2>1. 수집·처리되는 정보</h2>
@@ -42,6 +43,25 @@ import BlogPost from '../layouts/BlogPost.astro';
 		함께 적용됩니다. 본인이 작성한 댓글은 GitHub 에서 직접 수정·삭제할 수 있습니다.
 	</p>
 
+	<h3>뉴스레터 — 스티비(Stibee)</h3>
+	<p>
+		주식 일정 뉴스레터는 이메일 발송 서비스 <strong>스티비</strong>를 통해 발송됩니다.
+		사이트의 '구독' 버튼은 스티비가 운영하는 구독 페이지로 이동하며,
+		<strong>구독 신청과 이메일 주소 수집·보관은 스티비에서 이루어집니다.</strong>
+		이 사이트는 구독자의 이메일 주소를 저장하지 않습니다.
+	</p>
+	<ul>
+		<li><strong>수집 항목</strong> — 이메일 주소</li>
+		<li><strong>수집 목적</strong> — 주식 일정 뉴스레터 발송</li>
+		<li><strong>보유 기간</strong> — 구독을 해지하면 발송 대상에서 제외됩니다</li>
+	</ul>
+	<p>
+		구독 해지는 <strong>모든 발송 메일 하단의 '수신거부' 링크</strong>로 언제든 가능합니다.
+		자세한 처리 내용은
+		<a href="https://www.stibee.com/privacy" target="_blank" rel="noopener">스티비 개인정보처리방침</a>을
+		참고하세요.
+	</p>
+
 	<h3>호스팅 — Cloudflare Pages</h3>
 	<p>
 		사이트는 Cloudflare Pages 에서 제공됩니다. 서비스 제공과 보안(악성 트래픽 차단 등)을 위해
@@ -64,13 +84,15 @@ import BlogPost from '../layouts/BlogPost.astro';
 	<h2>4. 제3자 제공</h2>
 	<p>
 		사이트 운영자는 방문자의 개인정보를 제3자에게 판매하거나 제공하지 않습니다.
-		위에 밝힌 서비스(Cloudflare, GitHub)는 사이트 운영에 필요한 범위에서만 사용됩니다.
+		위에 밝힌 서비스(Cloudflare, GitHub, 스티비)는 사이트 운영과 뉴스레터 발송에 필요한
+		범위에서만 사용됩니다.
 	</p>
 
 	<h2>5. 보유 기간</h2>
 	<p>
 		방문 통계는 Cloudflare 의 보관 정책에 따라 일정 기간 후 삭제됩니다.
-		댓글은 작성자가 삭제하거나 사이트 운영자가 해당 토론을 삭제하기 전까지 GitHub 에 유지됩니다.
+		댓글은 작성자가 삭제하거나 사이트 운영자가 해당 토론을 삭제하기 전까지 GitHub 에 유지됩니다.<br />
+		뉴스레터 구독 정보는 구독자가 해지할 때까지 스티비에 보관됩니다.
 	</p>
 
 	<h2>6. 문의</h2>
@@ -82,5 +104,6 @@ import BlogPost from '../layouts/BlogPost.astro';
 	<h2>7. 변경 이력</h2>
 	<ul>
 		<li>2026년 9월 3일 — 최초 작성</li>
+		<li>2026년 9월 7일 — 뉴스레터(스티비) 항목 추가</li>
 	</ul>
 </BlogPost>
