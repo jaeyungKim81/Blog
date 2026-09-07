@@ -10,3 +10,8 @@ export type Category = (typeof CATEGORIES)[number];
 
 // 분류를 적지 않은 글이 들어왔을 때 떨어질 자리
 export const DEFAULT_CATEGORY: Category = '개발';
+
+// 주식 일정 뉴스레터. 구독 안내는 이 주제를 다루는 글에만 붙인다.
+// 개발 글에 주식 뉴스레터 버튼이 붙으면 읽는 맥락과 어긋난다.
+export const NEWSLETTER_URL = 'https://stib.ee/UTyM';
+export const NEWSLETTER_CATEGORY: Category = '투자';

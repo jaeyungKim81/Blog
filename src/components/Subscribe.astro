@@ -1,0 +1,73 @@
+---
+// 글 끝에 붙는 뉴스레터 구독 안내.
+// 글을 다 읽은 사람에게만 보이도록 본문 뒤에 둔다.
+import { NEWSLETTER_URL } from '../consts';
+---
+
+<aside class="subscribe">
+	<p class="lead">매주 월요일 아침, 이번 주 주식 일정을 메일로 보내드립니다.</p>
+	<p class="sub">
+		배당 기준일과 공모주 청약일을 전자공시(DART)에서 모아 정리합니다.
+		직접 찾아보지 않아도 되도록요.
+	</p>
+	<a class="cta" href={NEWSLETTER_URL} target="_blank" rel="noopener">
+		무료로 구독하기
+	</a>
+	<p class="note">개인이 만든 뉴스레터입니다. 광고 없이 공시 일정만 정리합니다.</p>
+</aside>
+
+<style>
+	.subscribe {
+		width: 720px;
+		max-width: calc(100% - 2em);
+		margin: 3rem auto 0;
+		padding: 1.8rem;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 12px;
+		background: rgba(var(--gray-light), 22%);
+	}
+	.lead {
+		margin: 0;
+		font-size: 1.08rem;
+		font-weight: 700;
+		line-height: 1.55;
+		color: rgb(var(--black));
+		word-break: keep-all;
+	}
+	.sub {
+		margin: 0.6rem 0 0;
+		font-size: 0.94rem;
+		line-height: 1.7;
+		color: rgb(var(--gray-dark));
+		word-break: keep-all;
+	}
+	.cta {
+		display: inline-block;
+		margin-top: 1.2rem;
+		padding: 0.7rem 1.5rem;
+		border-radius: 8px;
+		background: var(--accent);
+		color: #fff;
+		font-weight: 700;
+		text-decoration: none;
+	}
+	.cta:hover {
+		background: var(--accent-dark);
+		color: #fff;
+	}
+	.note {
+		margin: 1rem 0 0;
+		font-size: 0.84rem;
+		color: rgb(var(--gray));
+	}
+	@media (max-width: 720px) {
+		.subscribe {
+			padding: 1.4rem;
+		}
+		/* 좁은 화면에서는 버튼을 가로로 채워 누르기 쉽게 */
+		.cta {
+			display: block;
+			text-align: center;
+		}
+	}
+</style>
