@@ -37,11 +37,14 @@ const recent = posts.slice(0, 5);
 				{
 					recent.map((post) => (
 						<li>
-							<a href={`/blog/${post.id}/`}>{post.data.title}</a>
-							<div class="meta">
-								<FormattedDate date={post.data.pubDate} />
-							</div>
-							<p class="desc">{post.data.description}</p>
+							<a href={`/blog/${post.id}/`}>
+								<h3 class="title">{post.data.title}</h3>
+								<p class="date">
+									<FormattedDate date={post.data.pubDate} />
+									<span class="cat">{post.data.category}</span>
+								</p>
+								<p class="desc">{post.data.description}</p>
+							</a>
 						</li>
 					))
 				}
@@ -70,24 +73,48 @@ const recent = posts.slice(0, 5);
 		margin-top: 2.5em;
 		font-size: 1.3em;
 	}
+	/* 아래 값은 목록 화면(/blog/)과 같다. 같은 글 목록이 두 화면에서 달라 보이면
+	   손이 덜 간 쪽이 대충 만든 것처럼 읽힌다. 한쪽만 고치지 말 것. */
 	.recent {
 		list-style: none;
+		margin: 0;
 		padding: 0;
 	}
 	.recent li {
-		margin-bottom: 1.8em;
+		padding: 1.6rem 0;
+		border-bottom: 1px solid rgb(var(--gray-light));
 	}
-	.recent a {
-		font-size: 1.15em;
-		font-weight: 700;
+	.recent li:last-child {
+		border-bottom: none;
 	}
-	.meta {
+	.recent li a {
+		display: block;
+		text-decoration: none;
+	}
+	.title {
+		margin: 0;
+		font-size: 1.28rem;
+		line-height: 1.45;
+		color: rgb(var(--black));
+		word-break: keep-all;
+	}
+	.date {
+		margin: 0.35rem 0 0;
+		font-size: 0.85rem;
 		color: rgb(var(--gray));
-		font-size: 0.9em;
-		margin-top: 0.2em;
+	}
+	/* 분류 배지. 개발·투자가 섞여 나오므로 제목을 읽지 않아도 구분돼야 한다. */
+	.cat {
+		margin-left: 0.5rem;
+		padding: 0.1rem 0.5rem;
+		border-radius: 999px;
+		background: rgb(var(--gray-light));
+		font-size: 0.78rem;
+		color: rgb(var(--gray-dark));
 	}
 	.desc {
-		margin: 0.4em 0 0;
+		margin: 0.4rem 0 0;
 		color: rgb(var(--gray-dark));
+		word-break: keep-all;
 	}
 </style>

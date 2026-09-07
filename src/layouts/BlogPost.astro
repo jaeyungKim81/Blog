@@ -88,9 +88,13 @@ const { title, description, pubDate, updatedDate, heroImage, category, ogSlug } 
 					<div class="title">
 						<div class="date">
 							<FormattedDate date={pubDate} />
-							<a class="cat" href={`/blog/category/${encodeURIComponent(category)}/`}>
-								{category}
-							</a>
+							{/* 소개·개인정보처리방침도 이 레이아웃을 쓴다. 분류가 없으면 배지를 그리지 않는다 —
+							    없으면 'undefined' 배지와 /blog/category/undefined/ 로 가는 깨진 링크가 떴다. */}
+							{category && (
+								<a class="cat" href={`/blog/category/${encodeURIComponent(category)}/`}>
+									{category}
+								</a>
+							)}
 							{
 								updatedDate && (
 									<div class="last-updated-on">
