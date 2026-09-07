@@ -9,14 +9,14 @@ import Comments from '../components/Comments.astro';
 import Subscribe from '../components/Subscribe.astro';
 import { NEWSLETTER_CATEGORY } from '../consts';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'blog'>['data'] & { ogSlug?: string };
 
-const { title, description, pubDate, updatedDate, heroImage, category } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, category, ogSlug } = Astro.props;
 ---
 
 <html lang="ko">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} ogSlug={ogSlug} />
 		<style>
 			main {
 				width: calc(100% - 2em);

@@ -3,7 +3,6 @@
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
-import FallbackImage from '../assets/blog-placeholder-1.jpg';
 import { SITE_TITLE } from '../consts';
 import { Font } from 'astro:assets';
 
@@ -11,11 +10,16 @@ interface Props {
 	title: string;
 	description: string;
 	image?: ImageMetadata;
+	/** 공유 미리보기로 쓸 글 슬러그. 없으면 사이트 공통 그림(/og/site.png). */
+	ogSlug?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = FallbackImage } = Astro.props;
+const { title, description, image, ogSlug } = Astro.props;
+// 빌드 때 만들어 둔 그림을 가리킨다(src/pages/og/[...slug].png.ts).
+// image 를 직접 넘기면 그것이 우선한다.
+const ogUrl = image ? new URL(image.src, Astro.url) : new URL(`/og/${ogSlug ?? 'site'}.png`, Astro.url);
 ---
 
 <!-- Global Metadata -->
@@ -50,7 +54,9 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image.src, Astro.url)} />
+<meta property="og:image" content={ogUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
