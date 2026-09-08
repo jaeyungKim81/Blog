@@ -11,9 +11,9 @@ export type Category = (typeof CATEGORIES)[number];
 // 분류를 적지 않은 글이 들어왔을 때 떨어질 자리
 export const DEFAULT_CATEGORY: Category = '개발';
 
-// 주식 일정 뉴스레터. 구독 안내는 이 주제를 다루는 글에만 붙인다.
-// 개발 글에 주식 뉴스레터 버튼이 붙으면 읽는 맥락과 어긋난다.
+// 주식 일정 뉴스레터. 구독 안내는 frontmatter 에 newsletter: true 를
+// 적은 글에만 붙는다. 분류('투자')로 묶었더니 신도시 현황처럼 주식과
+// 무관한 투자 글에도 따라붙었다.
 // 구독 폼 주소. stib.ee/UTyM 은 발송본의 웹 버전이라 눌러도
 // 구독이 안 된다. 지난 호를 보여줄 때만 쓸 것.
 export const NEWSLETTER_URL = 'https://page.stibee.com/subscriptions/511811';
-export const NEWSLETTER_CATEGORY: Category = '투자';

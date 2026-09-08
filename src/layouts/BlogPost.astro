@@ -7,11 +7,11 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import Comments from '../components/Comments.astro';
 import Subscribe from '../components/Subscribe.astro';
-import { NEWSLETTER_CATEGORY } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'] & { ogSlug?: string };
 
-const { title, description, pubDate, updatedDate, heroImage, category, ogSlug } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, category, ogSlug, newsletter } =
+	Astro.props;
 ---
 
 <html lang="ko">
@@ -108,7 +108,7 @@ const { title, description, pubDate, updatedDate, heroImage, category, ogSlug } 
 					</div>
 					<slot />
 				</div>
-				{category === NEWSLETTER_CATEGORY && <Subscribe />}
+				{newsletter && <Subscribe />}
 				<Comments />
 			</article>
 		</main>

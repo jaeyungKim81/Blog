@@ -18,6 +18,9 @@ const blog = defineCollection({
 			// 목록에 없는 값을 적으면 빌드가 실패한다. 오타로 분류가 조용히
 			// 갈라지는 것보다 그 편이 낫다.
 			category: z.enum(CATEGORIES).default(DEFAULT_CATEGORY),
+			// 주식 일정 뉴스레터 구독 안내를 붙일지. 분류로 묶으면 주식과
+			// 무관한 투자 글에도 따라붙어, 글마다 켜는 값으로 둔다.
+			newsletter: z.boolean().default(false),
 		}),
 });
 
