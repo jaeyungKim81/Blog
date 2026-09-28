@@ -19,6 +19,8 @@ category: '투자'
   인천  
   접수 \~9/30  
   35세대  
+  5.79억\~7.32억  
+  84㎡ 7.32억  
   당첨자 발표 10/7  
   입주 2030.05  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000448&pblancNo=2026000448)
@@ -26,6 +28,7 @@ category: '투자'
   경기  
   접수 \~9/29  
   61세대  
+  3.67억\~3.94억  
   당첨자 발표 10/8  
   입주 2028.07  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026820011&pblancNo=2026820011)
@@ -33,6 +36,8 @@ category: '투자'
   경기  
   접수 \~10/2  
   426세대  
+  8.77억\~11.98억  
+  84㎡ 11.98억  
   당첨자 발표 10/12  
   입주 2029.03  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000453&pblancNo=2026000453)
@@ -42,6 +47,8 @@ category: '투자'
 - **9/28(월)** 숭의역 노르웨이숲 더 스카이  
   인천  
   108세대  
+  4.79억\~4.91억  
+  84㎡ 4.91억  
   당첨자 발표 10/6  
   입주 2030.05  
   [공고](https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950083&pblancNo=2026950083&houseSecd=02)
@@ -51,24 +58,28 @@ category: '투자'
 - **9/28(월)** 과천 푸르지오 라비엔오  
   경기  
   2세대  
+  8.03억  
   당첨자 발표 10/2  
   입주 2026.12  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930036&pblancNo=2026930036)
 - **9/28(월)** 과천 푸르지오 벨라르테  
   경기  
   1세대  
+  9.52억  
   당첨자 발표 10/2  
   입주 2026.12  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930037&pblancNo=2026930037)
 - **9/28(월)** 아크로 리버스카이(2차)  
   서울  
   3세대  
+  49.28억  
   당첨자 발표 10/6  
   입주 2029.08  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910220&pblancNo=2026910220)
 - **10/6(화)** 강변역 센트럴 아이파크  
   서울  
   1세대  
+  12.22억  
   당첨자 발표 10/12  
   입주 2026.11  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930040&pblancNo=2026930040)
@@ -81,6 +92,7 @@ category: '투자'
   경기  
   118세대 모집  
   49명 접수  
+  5.28억\~7.09억  
   미달 69세대  
   경쟁률 0.42:1  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000431&pblancNo=2026000431)
@@ -88,6 +100,7 @@ category: '투자'
   경기  
   393세대 모집  
   360명 접수  
+  8.93억\~9.11억  
   미달 33세대  
   경쟁률 0.92:1  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000449&pblancNo=2026000449)
@@ -95,6 +108,7 @@ category: '투자'
   경기  
   892세대 모집  
   141명 접수  
+  5.74억\~5.84억  
   미달 751세대  
   경쟁률 0.16:1  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000437&pblancNo=2026000437)
@@ -102,6 +116,7 @@ category: '투자'
   경기  
   816세대 모집  
   94명 접수  
+  5.60억\~5.66억  
   미달 722세대  
   경쟁률 0.12:1  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000438&pblancNo=2026000438)
@@ -112,6 +127,7 @@ category: '투자'
   서울  
   11세대 모집  
   54명 접수  
+  8.64억\~9.55억  
   최고 7.0:1  
   경쟁률 4.91:1  
   [공고](https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950082&pblancNo=2026950082&houseSecd=02)
@@ -119,6 +135,7 @@ category: '투자'
   경기  
   14세대 모집  
   4명 접수  
+  5.36억  
   미달 10세대  
   경쟁률 0.29:1  
   [공고](https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950084&pblancNo=2026950084&houseSecd=02)
@@ -129,6 +146,7 @@ category: '투자'
   경기  
   229세대 모집  
   135명 접수  
+  8.75억  
   미달 94세대  
   경쟁률 0.59:1  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910241&pblancNo=2026910241)
@@ -136,6 +154,7 @@ category: '투자'
   경기  
   126세대 모집  
   116명 접수  
+  3.97억\~5.34억  
   미달 10세대  
   경쟁률 0.92:1  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910246&pblancNo=2026910246)
@@ -143,6 +162,7 @@ category: '투자'
   서울  
   14세대 모집  
   154명 접수  
+  9.53억  
   최고 11.0:1  
   경쟁률 11.00:1  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910244&pblancNo=2026910244)
@@ -150,12 +170,14 @@ category: '투자'
   경기  
   4세대 모집  
   54,626명 접수  
+  7.57억\~8.08억  
   경쟁률 13,656.50:1  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910236&pblancNo=2026910236)
 - **9/23(수)** 신천역 에피트(2차)  
   경기  
   15세대 모집  
   26명 접수  
+  6.65억\~8.53억  
   최고 9.0:1  
   경쟁률 1.73:1  
   [공고](https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910247&pblancNo=2026910247)
