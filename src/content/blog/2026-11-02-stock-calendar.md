@@ -98,8 +98,8 @@ newsletter: true
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000099)
 - **11/18(수)** 유캐스트  
   청약 \~11/19  
-  배정공고 11/23  
-  신영증권  
+  배정공고·납입 11/23  
+  유진투자증권  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021000443)
 - **11/23(월)** 아델  
   청약 \~11/24  
