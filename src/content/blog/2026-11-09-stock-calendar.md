@@ -54,7 +54,8 @@ newsletter: true
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000099)
 - **11/18(수)** 유캐스트  
   청약 \~11/19  
-  배정공고·납입 11/23  
+  19,000\~23,000원  
+  공모 규모 152억원  
   유진투자증권  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021000443)
 - **11/23(월)** 아델  
@@ -68,6 +69,12 @@ newsletter: true
   공모 규모 125억원  
   신영증권  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028000471)
+- **11/24(화)** 제논  
+  청약 \~11/25  
+  9,700\~12,200원  
+  공모 규모 213억원  
+  삼성증권  
+  [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026000001)
 - **11/24(화)** 케이엠에프  
   청약 \~11/25  
   15,000\~17,800원  
@@ -77,8 +84,8 @@ newsletter: true
 - **11/27(금)** 에이엔에이치스트럭쳐  
   청약 \~11/30  
   11,200\~13,600원  
-  납입 12/2  
-  엔에이치투자증권  
+  공모 규모 235억원  
+  NH투자증권  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103000106)
 - **12/1(화)** 엔키화이트햇  
   청약 \~12/2  
@@ -173,6 +180,11 @@ newsletter: true
   주당 20,000원  
   시가배당률 1.56%  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028800045)
+- **11/30(월)** 신세계  
+  지급 12/18  
+  주당 2,600원  
+  시가배당률 1.0%  
+  [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261110800287)
 - **11/30(월)** 현대자동차  
   지급 12/30  
   주당 2,500원  
@@ -199,6 +211,9 @@ newsletter: true
 - **11/27(금)** 기업은행  
   소각예정일  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261023800699)
+- **11/30(월)** 신세계  
+  소각예정일  
+  [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261110800292)
 - **12/1(화)** LG  
   소각용 자사주 취득 개시  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028800534)
@@ -258,12 +273,6 @@ newsletter: true
   기관 경쟁률 1,163:1  
   확정 공모가 11,000원  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103000312)
-- **11/4(수)** 제논  
-  청약 \~11/5  
-  9,700\~12,200원  
-  공모 규모 213억원  
-  삼성증권  
-  [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026000001)
 - **11/5(목)** SimwonAmericaCorp.  
   당일 마감  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012000149)

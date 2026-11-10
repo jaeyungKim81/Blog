@@ -41,12 +41,6 @@ newsletter: true
   기관 경쟁률 1,163:1  
   확정 공모가 11,000원  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103000312)
-- **11/4(수)** 제논  
-  청약 \~11/5  
-  9,700\~12,200원  
-  공모 규모 213억원  
-  삼성증권  
-  [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026000001)
 - **11/5(목)** SimwonAmericaCorp.  
   당일 마감  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012000149)
@@ -112,6 +106,12 @@ newsletter: true
   공모 규모 125억원  
   신영증권  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028000471)
+- **11/24(화)** 제논  
+  청약 \~11/25  
+  9,700\~12,200원  
+  공모 규모 213억원  
+  삼성증권  
+  [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026000001)
 - **11/24(화)** 케이엠에프  
   청약 \~11/25  
   15,000\~17,800원  
