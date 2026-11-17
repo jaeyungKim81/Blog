@@ -41,9 +41,6 @@ newsletter: true
   기관 경쟁률 1,163:1  
   확정 공모가 11,000원  
   [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103000312)
-- **11/5(목)** SimwonAmericaCorp.  
-  당일 마감  
-  [공시](https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012000149)
 - **11/5(목)** 옵토닉스  
   청약 \~11/6  
   공모 규모 220억원  
